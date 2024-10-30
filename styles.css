@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    margin: 0;
+}
+
+.calculator {
+    background: #282c34;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 400px; /* Mở rộng chiều rộng của máy tính */
+}
+
+.display {
+    background: #444;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 32px;
+    color: #ffffff;
+    text-align: right;
+    margin-bottom: 15px;
+    height: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 20px;
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #21a1f1;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn.special {
+    background-color: #ff4757;
+    color: white;
+}
+
+.btn.special:hover {
+    background-color: #ff6b81;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Ẩn modal theo mặc định */
+    position: fixed; /* Ở vị trí cố định */
+    z-index: 1; /* Đặt lên trên các phần tử khác */
+    left: 0;
+    top: 0;
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    height: 100%; /* Chiếm toàn bộ chiều cao */
+    overflow: auto; /* Thêm thanh cuộn nếu cần */
+    background-color: rgba(0, 0, 0, 0.5); /* Nền tối với độ mờ */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Đặt giữa màn hình */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Kích thước modal */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.h1{
+    font-size: 45px;
+}
+
+.p{
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+}
+

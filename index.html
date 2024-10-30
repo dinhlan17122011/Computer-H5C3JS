@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Tính</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+     <!-- Hộp hướng dẫn -->
+     <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1 class="h1">Hướng Dẫn Sử Dụng</h1>
+            <p class="p">Chào mừng bạn đến với máy tính của chúng tôi!</p>
+            <p class="p">Để sử dụng, hãy làm theo các hướng dẫn sau:</p>
+            <ul class="ul">
+                <li class="li">Nhấn các nút số để nhập giá trị.</li>
+                <li class="li">Sử dụng các nút phép toán (+, -, *, /) để thực hiện các phép toán.</li>
+                <li class="li">Nhấn "=" để tính toán kết quả.</li>
+                <li class="li">Bạn có thể chuyển đổi giữa dạng phân số và số thập phân bằng cách nhấn nút "S<=>H".</li>
+                <li class="li">Sử dụng các chức năng như sin, cos, tan, log, và căn bậc hai để tính toán.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn special" onclick="deleteLastCharacter()">DEL</button>
+
+            <button class="btn special" onclick="appendSin()">sin</button>
+            <button class="btn special" onclick="appendCos()">cos</button>
+            <button class="btn special" onclick="appendTan()">tan</button>
+
+            <button class="btn special" onclick="calculateLog()">log</button>
+            <button class="btn special" onclick="calculateSqrt()">√</button>
+            <button class="btn special" onclick="calculateSquare()">x²</button>
+            <button class="btn special" onclick="calculateExponent()">xⁿ</button>
+            
+            <button class="btn" onclick="appendToDisplay('7')">7</button>
+            <button class="btn" onclick="appendToDisplay('8')">8</button>
+            <button class="btn" onclick="appendToDisplay('9')">9</button>
+            <button class="btn" onclick="appendToDisplay('/')">/</button>
+
+            <button class="btn" onclick="appendToDisplay('4')">4</button>
+            <button class="btn" onclick="appendToDisplay('5')">5</button>
+            <button class="btn" onclick="appendToDisplay('6')">6</button>
+            <button class="btn" onclick="appendToDisplay('*')">*</button>
+
+            <button class="btn" onclick="appendToDisplay('1')">1</button>
+            <button class="btn" onclick="appendToDisplay('2')">2</button>
+            <button class="btn" onclick="appendToDisplay('3')">3</button>
+            <button class="btn" onclick="appendToDisplay('-')">-</button>
+
+            <button class="btn" onclick="appendToDisplay('0')">0</button>
+            <button class="btn" onclick="appendToDisplay('.')">.</button>
+            <button class="btn" onclick="calculateResult()">=</button>
+            <button class="btn" onclick="appendToDisplay('+')">+</button>
+            
+            <button class="btn special" onclick="convert()">S<=>H</button>
+            <button class="btn special" onclick="appendToDisplay('(')">(</button>
+            <button class="btn special" onclick="appendToDisplay(')')">)</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="keyboard.js"></script>
+</body>
+</html>
